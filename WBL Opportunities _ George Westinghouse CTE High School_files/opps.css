@@ -1,0 +1,449 @@
+/* imported fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+
+@import url("https://fonts.googleapis.com/css2?family=Kenia&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pinyon+Script&family=Shrikhand&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kelly+Slab&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pinyon+Script&family=Shrikhand&family=Tektur:wght@400..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* import open props (for pre-defined variables) */
+@import "https://unpkg.com/open-props";
+
+:root {
+  --clr-neutral-900: hsl(207, 19%, 9%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(54, 77%, 52%);
+  --clr-neutral-600: hsl(216, 55%, 17%);
+  --level-one: translateZ(3rem);
+  --level-two: translateZ(6rem);
+  --level-three: translateZ(9rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* html & body */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* navbar one */
+#nav-1,
+#nav-2,
+#nav-1Modal .modal-content, #nav-2 .navbar-toggler, .opportunities  {
+  background-color: var(--clr-neutral-400);
+}
+
+#nav-2 ul li .under-divider {
+  color: var(--clr-neutral-400);
+}
+
+#nav-1-icons .btn:hover, #nav-2 .nav-item a:hover{
+  color: #fff;
+}
+
+#nav-1-icons .btn:hover {
+  transform: scale(1.2);
+  transition: all 0.6s;
+}
+
+#nav-1Modal .modal-title, #nav-2 li a, #nav-2 .dropdown-item, .gen-title, .general-info p {
+  color: var(--clr-neutral-600);
+}
+
+#nav-1Modal .modal-footer button,
+#main-title{
+  background-color: var(--clr-neutral-600);
+}
+
+/* main title */
+#main-title {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+}
+
+.orange-type,
+#nav-2 .dropdown-item:focus,
+#nav-2 .dropdown-item:hover{
+  color: #ea9628 !important;
+}
+
+/* navbar 2 */
+#nav-2 li a, footer {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+}
+
+#nav-2 .nav-item a:hover {
+  text-decoration: none;
+  border-bottom: 3px solid #ea9628;
+}
+
+#nav-2 .dropdown-item {
+  font-size: 0.9rem;
+}
+
+#nav-2 ul li .under-divider {
+  border-bottom: 1px solid #fff;
+}
+
+#nav-2 .navbar-nav li a {
+  font-size: 1.1rem;
+}
+
+#nav-2 .nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+#bellModal img,
+#calModal img {
+  width: 100%;
+}
+
+#main-title h4 {
+  letter-spacing: 2px;
+  font-family: "PT Sans", sans-serif;
+}
+
+
+/* 
+section: general-info
+*/
+.general-info h1  {
+  font-size: 2.1rem;
+}
+
+.general-info {
+  background-color: #e18325;
+  border: none;
+}
+
+.gen-sub {
+  font-family: "Times New Roman", Times, serif;
+}
+
+hr {
+  height: 6px;
+}
+
+
+/* section: table */
+#wbl-opps-table th{
+  background-color: var(--clr-neutral-600);
+  color: var(--clr-neutral-400);
+  font-family: "Poppins", sans-serif;
+}
+
+#wbl-opps-table > tbody > tr:hover > * {
+  background-color: var(--clr-neutral-400);
+}
+
+.job-table table{
+  width: 100%;
+}
+
+.table-text-color{
+  color: var(--clr-neutral-600);
+}
+
+
+
+
+/* to top feature */
+.to-top{
+  background: #fff;
+  position: fixed;
+  bottom: 26px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #1f1f1f;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.to-top.active{
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: .55;
+}
+
+
+/* FOOTER */
+footer p {
+font-size: 0.9rem;
+margin-top: -20px;
+}
+
+footer #footer-logo {
+  width: 50%;
+}
+
+footer #copyright {
+  font-family: "Tektur", cursive;
+}
+
+
+/* 
+====================
+MEDIA QUERIES - MINIMUMS
+====================
+*/
+
+/* minimum width of 992 */
+@media screen and (min-width: 992px) {
+  /* NAV 1 */
+
+  /* MINI SCREEN LOGO */
+  #mini-screen {
+    display: none;
+  }
+
+  /* NAV 2 */
+  #nav-2 ul li a {
+    font-size: 1rem;
+  }
+
+  #nav-2 .dropdown-item {
+    font-size: 0.9rem;
+  }
+
+  #nav-2 #logo-img {
+    width: 128px;
+    margin-left: 7px;
+  }
+
+  #nav-2 #logo-img img {
+    width: 126px;
+  }
+
+}
+
+/* minimum width of 1100 */
+@media screen and (min-width: 1100px) {
+
+  /* NAV 2 */
+  #nav-2 {
+    padding-left: 28px;
+  }
+
+  #nav-2 ul li a {
+    font-size: 1.1rem;
+  }
+
+  #nav-2 ul li {
+    margin-right: 7px;
+    margin-left: 1%;
+  }
+
+  #nav-2 .dropdown-item {
+    font-size: 1rem;
+  }
+
+  #nav-2 #logo-img {
+    width: 138px;
+    margin-left: 4px;
+  }
+
+  #nav-2 #logo-img img {
+    width: 138px;
+  }
+}
+
+/* minimum width of 1200 */
+@media screen and (min-width: 1200px) {
+  /* NAV 1 */
+
+  /* NAV 2 */
+  #nav-2 ul li a {
+    font-size: 1.175rem;
+  }
+
+  #nav-2 .dropdown-item {
+    font-size: 1.05rem;
+  }
+
+  #nav-2 #logo-img {
+    width: 148px;
+    margin-left: 4px;
+  }
+
+  #nav-2 #logo-img img {
+    width: 146px;
+  }
+}
+
+/* minim width of 1300 */
+@media screen and (min-width: 1300px) {
+
+  /* NAV-2 */
+  #nav-2 ul li a {
+    font-size: 1.275rem;
+  }
+
+  #nav-2 .dropdown-item {
+    font-size: 1.1rem;
+  }
+
+  #nav-2 #logo-img {
+    width: 162px;
+    margin-left: 4px;
+  }
+
+  #nav-2 #logo-img img {
+    width: 160px;
+  }
+}
+
+/* minimum width of 1400 */
+@media screen and (min-width: 1400px) {
+  #nav-2 ul li a {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+
+  #nav-2 .dropdown-item {
+    font-size: 1.1rem;
+  }
+
+  #nav-2 #logo-img {
+    width: 200px;
+    margin-left: 4px;
+  }
+
+  #nav-2 #logo-img img {
+    width: 100%;
+  }
+}
+
+/* maximum of 991 */
+@media screen and (max-width: 991px) {
+  #main-title h1{
+   padding-top: 10px;
+   font-size: 1.2rem;
+  }
+ 
+  #main-title h4{
+   padding-top: 5px;
+   font-size: 0.8rem;
+  }
+
+  #main-title img{
+   width: 50%;
+  }
+
+  #nav-2 #logo-img {
+    display: none;
+  }
+ }
+ 
+ /* minimum width of 1028 */
+ @media screen and (min-width: 1028px) {
+   #main-title img{
+     width: 100%;
+     padding-top: 15px;
+    }
+ }
+ 
+ /* minimum width of 1200 */
+ @media screen and (min-width: 1200px) {
+   #main-title img{
+     width: 85%;
+     padding-top: 0;
+    }
+ }
+
+
+ /* 
+====================
+MEDIA QUERIES - MAXIMUMS
+====================
+*/
+
+/* maximum of  767*/
+@media screen and (max-width: 767px) {
+  th{
+    display: none;
+    background: hsl(0 0% 0% / 0.5);
+  }
+
+  tr:nth-of-type(2n){
+    background: hsl(0 0% 0% / 0.1);
+  }
+
+  td{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 15ch auto;
+    justify-content: space-between;
+  }
+
+  td:first-child{
+    margin-top: 1rem;
+  }
+
+  td:last-child{
+    margin-bottom: 1.5rem;
+  }
+
+  td::before{
+    font-weight: 700;
+  }
+
+  td:nth-of-type(1)::before{
+    content: "Organization: ";
+  }
+  td:nth-of-type(2)::before{
+    content: "Eligibility: ";
+  }
+  td:nth-of-type(3)::before{
+    content: "Location: ";
+  }
+  td:nth-of-type(4)::before{
+    content: "Deadline: ";
+  }
+  td:nth-of-type(5)::before{
+    content: "Description: ";
+  }
+  td:nth-of-type(6)::before{
+    content: "Paid: ";
+  }
+  td:nth-of-type(7)::before{
+    content: "Media: ";
+  }
+  td:nth-of-type(8)::before{
+    content: "Link: ";
+  }
+
+  footer #footer-logo {
+    width: 30%;
+  }
+
+  footer #nyc-logo {
+    width: 30%;
+  }
+}
